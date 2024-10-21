@@ -182,6 +182,16 @@ article {
   margin: 16px 0;
 }
 
+.about-text a {
+  color: var(--orange-yellow-crayola); /* Ensures the links have the same color as other accents */
+  text-decoration: underline;
+}
+
+.about-text a:hover {
+  color: var(--vegas-gold); /* Changes the color when hovering */
+  text-decoration: none; /* Removes underline on hover */
+}
+
 .icon-box {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -505,6 +515,10 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
+
+.about-text a {
+  display: inline; /* Ensures links remain inline */
+}
 
 
 
