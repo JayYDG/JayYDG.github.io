@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with J</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LXQLH66J4S');
+  </script>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/profile_picture_jy_v2.jpg" alt="Jiwei(Jay) Yao" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Jiwei(Jay) Yao">Jiwei(Jay) Yao</h1>
+          <p class="title">Research Assisstant</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:jiwei.yao@utah.edu" class="contact-link">jiwei.yao@utah.edu</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Utah, United State</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/jiwei-yao/" class="social-link">
+              <ion-icon name="logo-Linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?hl=en&user=SsiM4Q0AAAAJ" class="social-link">
+              <ion-icon name="logo-Google"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="proj_and_pubs.html" class="navbar-link">Publications & Projects</a>
+          </li>
+
+          <!-- Add Chat with J as a new menu item -->
+          <li class="navbar-item">
+            <a href="#" class="navbar-link active">Chat with J</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!--
+        - #CHAT
+      -->
+      <article class="blog active" data-page="chat">
+        <header>
+          <h2 class="h2 article-title">Chat with J</h2>
+        </header>
+
+        <section class="about-text">
+          <!-- Introduction or any content you'd like above the chat -->
+          <p>
+            Below, you'll find my personal AI chatbot, dubbed <strong>J</strong> until I come up with something better.
+            This bot has been trained on most of my public writing, including the entire contents of this web site,
+            my resume, my blog, and most of my publications. I'm also adding more over time, such as a little general
+            trivia about me, some guidelines for whether to contact me on certain topics, and some insights into how I
+            work. Feel free to ask away and learn more about me!
+          </p>
+
+          <!-- The chatbot will embed here -->
+          <div id="rispose-embed"
+               style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; margin-top: 1rem;">
+          </div>
+        </section>
+      </article>
+
+    </div> <!-- End main-content -->
+
+  </main> <!-- End MAIN -->
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!--
+    - Rispose settings
+      1) Set your widget ID
+      2) Use "embed" type so chat appears in #rispose-embed
+      3) Customize welcome text, etc. if desired
+  -->
+  <script>
+    window.risposeWidgetId = "a8kf346rzb8y"; // Replace with your real widget ID
+    window.risposeWidgetSettings = {
+      type: "embed",
+      welcome: "Hello! I'm Jiwei's AI assistant. How can I help you learn about my professional background?",
+      prompts: ["What are some of Jiwei's research papers?", "How could AI help with battery design?"],
+      custom_css: `
+        /* Example: Make chatbot text bigger */
+        #rispose-chat-messages {
+          font-size: 16px !important;
+        }
+      `
+    };
+  </script>
+
+  <!-- Load the Rispose script -->
+  <script defer src="https://rispose.com/cdn/script.js"></script>
+
+</body>
+
+</html>
